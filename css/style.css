@@ -1,3 +1,4 @@
+/***************general*******************/
 body {
   font-family: 'Times New Roman', times, serif;
   font-size: 100%;
@@ -7,6 +8,30 @@ i span {
   display: none;
 }
 
+img[src="images/tnyt-logo.png"] {
+  width: 195px;
+  height: 26px;
+}
+
+h1 {
+  max-width: 600px;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 700;
+  margin-left: 15%;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/*******************header************************/
 header {
   padding: 12px 15px 3px 15px;
   position: fixed;
@@ -22,11 +47,6 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 100;
-}
-
-img[src="images/tnyt-logo.png"] {
-  width: 195px;
-  height: 26px;
 }
 
 .header-l * {
@@ -73,24 +93,6 @@ img[src="images/tnyt-logo.png"] {
   margin-bottom: 20px;
 }
 
-h1 {
-  max-width: 600px;
-  font-size: 2em;
-  font-style: italic;
-  font-weight: 700;
-  margin-left: 15%;
-  margin-bottom: 20px;
-  line-height: 1.1;
-  color: #000;
-}
-
-h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #000;
-}
-
 figure {
   width: 100%;
 }
@@ -123,6 +125,10 @@ figcaption,
 .art-meta a {
   text-decoration: underline;
   text-decoration-color: #0003;
+}
+
+.art-meta a:hover {
+  text-decoration-color: #000;
 }
 
 .writer {
@@ -231,13 +237,14 @@ aside {
 aside p {
   font-size: 0.7rem;
   color: #666;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 aside img {
   width: 120px;
 }
 
+/**********************end of aside***********************/
 /**********************theory inflation***********************/
 .theory-inflation {
   width: 720px;
@@ -296,8 +303,168 @@ aside img {
   display: block;
   margin-bottom: 30px;
 }
+/**********************end of theory of inflation***********************/
+/*************************suggestions***********************/
 
-/*******************nav**********************/
+.s-suggestions {
+  display: flex;
+  margin: 5%;
+  line-height: 1.25;
+}
+
+.s-titles {
+  font-weight: medium;
+  font-family: 'Roboto Slab', serif;
+  clear: right;
+}
+
+.s-right {
+  width: 500px;
+}
+
+.s-right .s-titles {
+  padding: 20px 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.s-suggestions img {
+  width: 272px;
+}
+
+.s-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3%;
+}
+
+.s-suggestions h2 {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #000;
+}
+
+.s-more,
+.s-editors-picks {
+  margin-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.s-more div,
+.s-editors-picks div {
+  width: 272px;
+  height: 285px;
+}
+
+.s-suggestions figure {
+  height: 203px;
+}
+
+.s-suggestions figcaption {
+  float: right;
+  font-size: 0.7rem;
+  padding: 0;
+}
+
+.s-suggestions date {
+  font-size: 0.9rem;
+}
+/**********************end of suggestions***********************/
+/*************************sign up div**************************/
+
+.s-signup {
+  font-family: Arial, sans-serif;
+}
+
+.s-signup > h2 {
+  margin-bottom: 3px;
+  font-size: 1.1rem;
+}
+
+.s-signup > p {
+  width: 45%;
+  color: rgb(102, 102, 102);
+  font-size: 0.9rem;
+}
+
+form {
+  float: right;
+  width: 55%;
+  padding-left: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: 20px;
+  height: 34px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active {
+  outline: none;
+}
+
+.captcha {
+  height: 60px;
+  max-width: 230px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  margin: 4% 0;
+}
+
+form input[type="checkbox"] {
+  float: left;
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+
+.s-signup label {
+  font-size: 0.8rem;
+}
+
+button {
+  width: 100%;
+  height: 34px;
+  border: 1px solid rgb(98, 136, 165);
+  border-radius: 5px;
+  background-color: #fff;
+  color: rgb(98, 136, 165);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1%;
+}
+
+button:hover {
+  background-color: rgb(98, 136, 165);
+  color: #fff;
+}
+
+.s-signup ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.s-signup ul li:nth-child(-n+2) {
+  border-right: 1px solid rgb(153, 153, 153);
+  padding-right: 5px;
+}
+
+/**************************end of signup*******************/
+/**********************bottom nav***********************/
 nav::before {
   content: "";
   border-top: 2px solid #e2e2e2;
@@ -374,152 +541,7 @@ nav ul li img {
   border-top: 0.5px solid #ebebeb;
 }
 
-/****************suggestions*************/
-
-.s-suggestions {
-  display: flex;
-  margin: 5%;
-  line-height: 1.25;
-}
-
-.s-titles {
-  font-weight: medium;
-  font-family: 'Roboto Slab', serif;
-  clear: right;
-}
-
-.s-right {
-  width: 500px;
-}
-
-.s-right .s-titles {
-  padding: 20px 0;
-  border-top: 1px solid #ebebeb;
-}
-
-.s-suggestions img {
-  width: 272px;
-}
-
-.s-left {
-  display: flex;
-  flex-direction: column;
-  margin-right: 3%;
-}
-
-.s-suggestions h2 {
-  width: 100%;
-  padding-top: 20px;
-  border-top: 1px solid #000;
-}
-
-.s-more,
-.s-editors-picks {
-  margin-right: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5%;
-}
-
-.s-more div,
-.s-editors-picks div {
-  width: 272px;
-}
-
-.s-suggestions figure {
-  height: 203px;
-}
-
-.s-suggestions figcaption {
-  float: right;
-  font-size: 0.7rem;
-  padding: 0;
-}
-
-.s-suggestions date {
-  font-size: 0.9rem;
-}
-
-/*************sign up div************/
-.s-signup {
-
-}
-
-.s-signup > p {
-  width: 45%;
-}
-
-form {
-  float: right;
-  width: 55%;
-  padding-left: 20px;
-}
-
-input[type="text"] {
-  width: 100%;
-  margin-top: 20px;
-  height: 34px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #e6e6e6;
-  font-weight: bold;
-  margin-bottom: 4%;
-}
-
-input[type="text"]:focus,
-input[type="text"]:active {
-  outline: none;
-}
-
-.updates {
-}
-
-.captcha {
-  height: 60px;
-  max-width: 230px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #d3d3d3;
-  background-color: #f9f9f9;
-  border-radius: 2px;
-  margin-bottom: 4%;
-}
-
-.captcha input[type="checkbox"] {
-  width: 23px;
-  height: 23px;
-  background-color: #fff;
-  border-radius: 0;
-  margin-left: 10px;
-  margin-right: 25px;
-}
-
-.sign-up label {
-  vertical-align: middle;
-  font-size: 0.9rem;
-  margin-bottom: 4%;
-}
-
-button {
-  width: 100%;
-  height: 34px;
-  border: 1px solid rgb(98, 136, 165);
-  border-radius: 5px;
-  background-color: #fff;
-  color: rgb(98, 136, 165);
-  font-size: 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-bottom: 4%;
-}
-
-button:hover {
-  background-color: rgb(98, 136, 165);
-  color: #fff;
-}
-
-
+/**********************end of bottom nav***********************/
 /********************footer****************/
 footer {
   height: 40px;
